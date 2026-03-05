@@ -5,6 +5,7 @@ import Github from "./Github";
 import Aboutcard from "./AboutCard";
 import laptopImg from "../../Assets/about.png";
 import Skills from "./Skills";
+import ProjectLinks from "./ProjectLinks";
 
 function About() {
   return (
@@ -13,6 +14,8 @@ function About() {
       <Container>
         <Row style={{ justifyContent: "center", padding: "10px" }}>
           <Col
+
+          
             md={7}
             style={{
               justifyContent: "center",
@@ -35,6 +38,8 @@ function About() {
         </Row>
 
         <Skills />
+
+        <ProjectLinks />
 
         <Github />
       </Container>
