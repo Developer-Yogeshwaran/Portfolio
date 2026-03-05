@@ -1,0 +1,301 @@
+/* ========== EXPERIENCE TIMELINE STYLING ========== */
+
+.experience-section {
+  background: linear-gradient(135deg, rgba(26, 26, 30, 0.8), rgba(199, 112, 240, 0.05));
+  padding: 80px 0;
+  position: relative;
+}
+
+.experience-heading {
+  font-size: 2.5em;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.experience-subtitle {
+  text-align: center;
+  color: #ddd;
+  font-size: 1.2em;
+  margin-bottom: 50px;
+  font-style: italic;
+  letter-spacing: 0.5px;
+}
+
+/* ===== VERTICAL TIMELINE CUSTOMIZATION ===== */
+.vertical-timeline {
+  position: relative;
+}
+
+.vertical-timeline::before {
+  background: linear-gradient(
+    180deg,
+    rgba(199, 112, 240, 0.3) 0%,
+    rgba(255, 107, 157, 0.3) 50%,
+    rgba(78, 205, 196, 0.3) 100%
+  );
+}
+
+.vertical-timeline-element {
+  margin: 20px 0;
+  perspective: 1000px;
+}
+
+.vertical-timeline-element--left,
+.vertical-timeline-element--right {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* ===== TIMELINE CONTENT STYLES ===== */
+.vertical-timeline-element-content {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.05),
+    rgba(199, 112, 240, 0.08)
+  ) !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(199, 112, 240, 0.3) !important;
+  border-radius: 12px;
+  padding: 30px !important;
+  box-shadow: 0 8px 32px rgba(199, 112, 240, 0.1);
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  animation: fadeInUp 0.8s ease forwards;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+
+.vertical-timeline-element:nth-child(1) .vertical-timeline-element-content {
+  animation-delay: 0.1s;
+}
+
+.vertical-timeline-element:nth-child(2) .vertical-timeline-element-content {
+  animation-delay: 0.2s;
+}
+
+.vertical-timeline-element:nth-child(3) .vertical-timeline-element-content {
+  animation-delay: 0.3s;
+}
+
+.vertical-timeline-element:nth-child(4) .vertical-timeline-element-content {
+  animation-delay: 0.4s;
+}
+
+.vertical-timeline-element:nth-child(5) .vertical-timeline-element-content {
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.vertical-timeline-element-content:hover {
+  transform: translateY(-10px) scale(1.02);
+  border-color: rgba(199, 112, 240, 0.6);
+  box-shadow: 0 15px 50px rgba(199, 112, 240, 0.2),
+              0 0 40px rgba(255, 107, 157, 0.1);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(199, 112, 240, 0.12)
+  );
+}
+
+.vertical-timeline-element-content::before {
+  border-right: 15px solid rgba(199, 112, 240, 0.3);
+}
+
+.vertical-timeline-element--right .vertical-timeline-element-content::before {
+  border-right: 15px solid rgba(199, 112, 240, 0.3);
+}
+
+.vertical-timeline-element--left .vertical-timeline-element-content::before {
+  border-left: 15px solid rgba(199, 112, 240, 0.3);
+}
+
+/* ===== TIMELINE ICON STYLING ===== */
+.vertical-timeline-element-icon {
+  width: 50px !important;
+  height: 50px !important;
+  box-shadow: 0 0 0 4px rgba(26, 26, 30, 1), 0 0 20px rgba(199, 112, 240, 0.3) !important;
+  border-radius: 50% !important;
+  animation: iconFloat 3s ease-in-out infinite;
+}
+
+@keyframes iconFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.vertical-timeline-element-icon svg {
+  width: 25px;
+  height: 25px;
+  margin: 12.5px;
+}
+
+/* ===== TEXT CONTENT STYLING ===== */
+.timeline-title {
+  color: #c770f0;
+  font-size: 1.4em;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+.timeline-subtitle {
+  color: #ff6b9d;
+  font-size: 1.1em;
+  font-weight: 600;
+  margin-bottom: 15px;
+  opacity: 0.9;
+}
+
+.timeline-description {
+  color: #ddd;
+  font-size: 1em;
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+
+.timeline-content {
+  color: #aaa;
+  font-size: 0.95em;
+  padding-top: 12px;
+  border-top: 1px solid rgba(199, 112, 240, 0.2);
+  margin-top: 12px;
+}
+
+.timeline-content strong {
+  color: #4ecdc4;
+}
+
+/* ===== TIMELINE DATE STYLING ===== */
+.vertical-timeline-element-date {
+  color: #c770f0 !important;
+  font-weight: 700 !important;
+  font-size: 1.1em !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 1170px) {
+  .vertical-timeline-element-content {
+    padding: 25px !important;
+  }
+
+  .timeline-title {
+    font-size: 1.2em;
+  }
+
+  .vertical-timeline-element-icon {
+    width: 45px !important;
+    height: 45px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .experience-heading {
+    font-size: 2em;
+  }
+
+  .experience-subtitle {
+    font-size: 1em;
+  }
+
+  .vertical-timeline-element-content {
+    padding: 20px !important;
+  }
+
+  .timeline-title {
+    font-size: 1.1em;
+  }
+
+  .timeline-subtitle {
+    font-size: 1em;
+  }
+
+  .timeline-description {
+    font-size: 0.95em;
+  }
+
+  .vertical-timeline::before {
+    left: 20px;
+  }
+
+  .vertical-timeline-element--right .vertical-timeline-element-icon {
+    left: -4px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-heading {
+    font-size: 1.6em;
+  }
+
+  .vertical-timeline-element-content {
+    padding: 15px !important;
+  }
+
+  .timeline-title {
+    font-size: 1em;
+  }
+
+  .timeline-subtitle {
+    font-size: 0.9em;
+  }
+
+  .vertical-timeline-element-icon {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .vertical-timeline-element-date {
+    font-size: 0.9em !important;
+  }
+}
+
+/* ===== ENSURE TIMELINE CONTENT ALWAYS VISIBLE ===== */
+.vertical-timeline-element-content,
+.vertical-timeline-element-content.active {
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
+  pointer-events: auto !important;
+}
+
+/* Prevent any fade-out animations on timeline elements */
+.vertical-timeline-element-content.fadeout-bottom,
+.vertical-timeline-element-content.scroll-reveal.active,
+.vertical-timeline-element-content.fade-in-scale.active {
+  opacity: 1 !important;
+  animation: fadeInUp 0.8s ease forwards !important;
+}
+
+/* Override any potential animation states */
+.vertical-timeline::after {
+  content: none !important;
+}
+
+.vertical-timeline-element:hover .vertical-timeline-element-content {
+  opacity: 1 !important;
+}
+
+/* Ensure timeline never gets hidden by global effects */
+.experience-section .vertical-timeline-element-content {
+  opacity: 1 !important;
+  visibility: visible !important;
+}

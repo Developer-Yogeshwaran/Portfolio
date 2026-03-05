@@ -1,0 +1,341 @@
+/* ========== ENHANCED HOME SECTION ========== */
+
+.home-section {
+  position: relative;
+  overflow: hidden !important;
+}
+
+.home-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at 20% 50%,
+    rgba(199, 112, 240, 0.1) 0%,
+    transparent 50%
+  ),
+  radial-gradient(
+    circle at 80% 50%,
+    rgba(76, 205, 196, 0.1) 0%,
+    transparent 50%
+  );
+  animation: bgShift 15s ease-in-out infinite;
+  z-index: 0;
+  pointer-events: none;
+}
+
+@keyframes bgShift {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.home-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* ========== PROJECT HEADING STYLES ========== */
+
+.project-heading {
+  font-size: 2.3em !important;
+  font-weight: 600 !important;
+  color: white !important;
+  position: relative;
+  margin-bottom: 40px !important;
+  display: inline-block;
+}
+
+.project-heading::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #c770f0, #ff6b9d, #4ecdc4);
+  animation: expandWidth 0.8s ease-out forwards;
+}
+
+@keyframes expandWidth {
+  to {
+    width: 100%;
+  }
+}
+
+.project-heading .purple {
+  background: linear-gradient(135deg, #c770f0, #ff6b9d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ========== ABOUT SECTION ENHANCEMENTS ========== */
+
+.about-section {
+  position: relative;
+  overflow: hidden !important;
+}
+
+.about-section::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(
+    circle,
+    rgba(199, 112, 240, 0.1) 0%,
+    transparent 70%
+  );
+  animation: float 6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.about-img img {
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(199, 112, 240, 0.2);
+  transition: all 0.3s ease;
+  animation: float 4s ease-in-out infinite;
+}
+
+.about-img:hover img {
+  box-shadow: 0 20px 60px rgba(199, 112, 240, 0.4);
+  transform: translateY(-10px);
+}
+
+/* ========== HOME ABOUT SECTION ========== */
+
+.home-about-section {
+  position: relative;
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(199, 112, 240, 0.05),
+    rgba(76, 205, 196, 0.05)
+  ) !important;
+  overflow: hidden !important;
+}
+
+.home-about-section::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(
+    circle,
+    rgba(199, 112, 240, 0.15) 0%,
+    transparent 70%
+  );
+  animation: pulse 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.home-about-description h1 {
+  position: relative;
+  z-index: 1;
+}
+
+.home-about-description h1 .text-gradient {
+  animation: gradientShift 4s ease infinite;
+}
+
+.home-about-social {
+  position: relative;
+  z-index: 1;
+  padding: 50px 0 !important;
+}
+
+.home-about-social h1 {
+  position: relative;
+  display: inline-block;
+  color: white;
+}
+
+.home-about-social h1::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #c770f0, #ff6b9d);
+  animation: expandWidth 0.8s ease-out forwards 0.3s;
+}
+
+.home-about-social-links {
+  display: flex !important;
+  gap: 30px !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.home-social-icons {
+  transition: all 0.3s ease !important;
+  color: #c770f0 !important;
+}
+
+.home-social-icons:hover {
+  color: #ff6b9d !important;
+  transform: scale(1.2) rotate(5deg) !important;
+  text-shadow: 0 0 20px rgba(199, 112, 240, 0.5);
+}
+
+/* ========== RESUME SECTION ENHANCEMENTS ========== */
+
+.resume-section {
+  position: relative;
+  background-image: linear-gradient(
+    135deg,
+    rgba(199, 112, 240, 0.05) 0%,
+    rgba(76, 205, 196, 0.05) 100%
+  ) !important;
+  overflow: hidden !important;
+}
+
+/* ========== PROJECT CARDS ENHANCED ========== */
+
+.project-card {
+  perspective: 1000px;
+}
+
+.project-card-view {
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1) !important;
+  border-radius: 15px !important;
+  border: 1px solid rgba(199, 112, 240, 0.2) !important;
+  background: rgba(20, 20, 30, 0.8) !important;
+  backdrop-filter: blur(10px);
+}
+
+.project-card-view:hover {
+  transform: translateY(-15px) !important;
+  border-color: rgba(199, 112, 240, 0.6) !important;
+  box-shadow: 0 20px 40px rgba(199, 112, 240, 0.3) !important;
+}
+
+.project-card-view img {
+  border-radius: 15px 15px 0 0 !important;
+  height: 200px;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.project-card-view:hover img {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+/* ========== FOOTER ENHANCEMENTS ========== */
+
+.footer {
+  position: relative;
+  background: linear-gradient(
+    135deg,
+    rgba(28, 20, 40, 0.9),
+    rgba(20, 25, 45, 0.9)
+  ) !important;
+  border-top: 1px solid rgba(199, 112, 240, 0.2);
+  overflow: hidden;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #c770f0,
+    transparent
+  );
+}
+
+.footer-copywright h3,
+.footer-copywright {
+  transition: all 0.3s ease;
+}
+
+.footer-copywright:hover h3 {
+  color: #c770f0;
+  text-shadow: 0 0 10px rgba(199, 112, 240, 0.5);
+}
+
+/* ========== TECH ICONS ENHANCED ========== */
+
+.tech-icons {
+  position: relative;
+  transition: all 0.3s ease !important;
+  color: #c770f0 !important;
+  padding: 15px !important;
+}
+
+.tech-icons:hover {
+  transform: scale(1.4) rotate(10deg) !important;
+  filter: drop-shadow(0 0 15px rgba(199, 112, 240, 0.6));
+}
+
+/* ========== ANIMATIONS FOR TEXT CONTENT ========== */
+
+.home-about-body {
+  animation: slideIn 0.8s ease-out;
+  position: relative;
+  z-index: 1;
+}
+
+/* ========== RESPONSIVE ENHANCEMENTS ========== */
+
+@media (max-width: 768px) {
+  .project-heading {
+    font-size: 2em !important;
+  }
+
+  .home-about-social h1 {
+    font-size: 2em;
+  }
+
+  .home-about-social-links {
+    gap: 20px !important;
+  }
+
+  .home-social-icons {
+    font-size: 2em !important;
+  }
+
+  .about-img img {
+    border-radius: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-about-section::before {
+    width: 250px;
+    height: 250px;
+    top: -50px;
+    right: -50px;
+  }
+
+  .project-heading {
+    font-size: 1.7em !important;
+  }
+
+  .home-social-icons {
+    font-size: 1.8em !important;
+  }
+
+  .tech-icons {
+    font-size: 2em !important;
+  }
+}

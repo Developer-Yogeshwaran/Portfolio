@@ -1,0 +1,365 @@
+/* ========== ADVANCED HOME ANIMATIONS ========== */
+
+.home-content-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated Title with Complex Effects */
+.animated-title {
+  font-size: 4em;
+  font-weight: 900;
+  letter-spacing: 3px;
+  position: relative;
+  z-index: 1;
+}
+
+.animated-title .word {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.animated-title .word:nth-child(1) {
+  animation: slideInFromLeft 0.8s ease-out;
+}
+
+.animated-title .word:nth-child(2) {
+  animation: slideInFromBottom 0.8s ease-out 0.2s both;
+}
+
+.animated-title .word:nth-child(3) {
+  animation: slideInFromRight 0.8s ease-out 0.4s both;
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px) rotateY(90deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) rotateY(0);
+  }
+}
+
+@keyframes slideInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(100px) scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px) rotateY(-90deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) rotateY(0);
+  }
+}
+
+/* Glowing Accent */
+.glowing-accent {
+  position: absolute;
+  border-radius: 50%;
+  animation: glowFloat 6s ease-in-out infinite;
+}
+
+.glowing-accent.accent-1 {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(199, 112, 240, 0.3) 0%, transparent 70%);
+  top: 10%;
+  right: 10%;
+  animation-delay: 0s;
+}
+
+.glowing-accent.accent-2 {
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(76, 205, 196, 0.2) 0%, transparent 70%);
+  bottom: 20%;
+  left: 10%;
+  animation-delay: 2s;
+}
+
+.glowing-accent.accent-3 {
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(255, 107, 157, 0.25) 0%, transparent 70%);
+  top: 50%;
+  left: 50%;
+  animation-delay: 4s;
+}
+
+@keyframes glowFloat {
+  0%, 100% {
+    transform: translate(0, 0);
+    opacity: 0.5;
+  }
+  25% {
+    transform: translate(30px, -40px);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translate(-30px, 40px);
+    opacity: 0.4;
+  }
+  75% {
+    transform: translate(50px, 30px);
+    opacity: 0.6;
+  }
+}
+
+/* Decorative Line Animation */
+.decorative-line {
+  position: absolute;
+  background: linear-gradient(90deg, transparent, #c770f0, transparent);
+  height: 2px;
+  width: 200px;
+  animation: lineMove 3s ease-in-out infinite;
+}
+
+.decorative-line.line-1 {
+  top: 20%;
+  right: 0;
+  animation-delay: 0s;
+}
+
+.decorative-line.line-2 {
+  top: 40%;
+  left: 0;
+  animation-delay: 1s;
+}
+
+.decorative-line.line-3 {
+  bottom: 20%;
+  right: 0;
+  animation-delay: 2s;
+}
+
+@keyframes lineMove {
+  0%, 100% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+/* Floating Code Brackets */
+.floating-bracket {
+  position: absolute;
+  font-size: 2em;
+  opacity: 0.3;
+  color: #c770f0;
+  animation: floatAround 8s ease-in-out infinite;
+  font-weight: bold;
+}
+
+.bracket-1 {
+  top: 15%;
+  left: 5%;
+  animation-delay: 0s;
+}
+
+.bracket-2 {
+  top: 30%;
+  right: 8%;
+  animation-delay: 2s;
+}
+
+.bracket-3 {
+  bottom: 15%;
+  left: 10%;
+  animation-delay: 4s;
+}
+
+.bracket-4 {
+  bottom: 25%;
+  right: 5%;
+  animation-delay: 6s;
+}
+
+@keyframes floatAround {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(30px, -30px) rotate(90deg);
+  }
+  50% {
+    transform: translate(-30px, 30px) rotate(180deg);
+  }
+  75% {
+    transform: translate(30px, 30px) rotate(270deg);
+  }
+}
+
+/* Type Effect Text */
+.typewriter-wrapper {
+  position: relative;
+  display: inline-block;
+  margin-top: 30px;
+}
+
+.typewriter-text {
+  color: #c770f0;
+  font-size: 1.8em;
+  font-weight: 600;
+  min-height: 50px;
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+/* CTA Button Animation */
+.cta-button {
+  position: relative;
+  padding: 15px 40px;
+  font-size: 1.1em;
+  font-weight: 700;
+  background: linear-gradient(135deg, #c770f0, #ff6b9d);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  overflow: hidden;
+  margin-top: 30px;
+  transition: all 0.3s ease;
+}
+
+.cta-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s;
+  pointer-events: none;
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(199, 112, 240, 0.4);
+}
+
+.cta-button:hover::before {
+  left: 100%;
+}
+
+.cta-button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: rippleEffect 0.6s ease-out;
+  pointer-events: none;
+}
+
+@keyframes rippleEffect {
+  0% {
+    width: 0;
+    height: 0;
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}
+
+/* Home Avatar Enhancement */
+.home-avatar {
+  position: relative;
+  animation: floatSmooth 3s ease-in-out infinite;
+  filter: drop-shadow(0 0 30px rgba(199, 112, 240, 0.4));
+}
+
+.home-avatar::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  background: linear-gradient(45deg, #c770f0, #ff6b9d, #4ecdc4, #c770f0);
+  background-size: 400% 400%;
+  animation: rotateBorder 10s linear infinite;
+  z-index: -1;
+}
+
+@keyframes floatSmooth {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-30px) scale(1.02);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .animated-title {
+    font-size: 2.5em;
+  }
+
+  .glowing-accent {
+    opacity: 0.5;
+  }
+
+  .floating-bracket {
+    font-size: 1.5em;
+  }
+
+  .decorative-line {
+    width: 150px;
+  }
+
+  .cta-button {
+    padding: 12px 30px;
+    font-size: 1em;
+  }
+
+  .home-avatar::before {
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .animated-title {
+    font-size: 1.8em;
+    letter-spacing: 1px;
+  }
+
+  .typewriter-text {
+    font-size: 1.2em;
+  }
+
+  .glowing-accent {
+    width: 150px !important;
+    height: 150px !important;
+  }
+
+  .home-avatar {
+    max-width: 200px;
+  }
+}
