@@ -199,7 +199,6 @@ I'm **Yogeshwaran A**, a passionate and motivated computer science student with 
 - **Email:** [yogeshofficialwork1@gmail.com](mailto:yogeshofficialwork1@gmail.com)
 - **GitHub:** [github.com/Developer-Yogeshwaran](https://github.com/Developer-Yogeshwaran)
 - **LinkedIn:** [LinkedIn Profile](https://www.linkedin.com/in/yogeshwaran-a)
-- **Phone:** +91 9524055724
 
 ---
 
