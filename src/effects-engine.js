@@ -88,8 +88,9 @@ class ParticleEffectEngine {
       
       const angle = (i / burstCount) * Math.PI * 2;
       const velocity = 5 + Math.random() * 5;
-      const tx = Math.cos(angle) * velocity * 20;
-      const ty = Math.sin(angle) * velocity * 20;
+      // tx and ty calculated for potential animation use
+      // const tx = Math.cos(angle) * velocity * 20;
+      // const ty = Math.sin(angle) * velocity * 20;
       
       particle.style.animation = `none`;
       particle.style.position = "fixed";
@@ -154,8 +155,9 @@ class ParticleEffectEngine {
 
   handleResize() {
     // Handle responsive adjustments if needed
-    const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
-    const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+    // Viewport dimensions available if needed for future resize handling
+    // const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+    // const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
   }
 
   // Add glow effect to elements on hover
