@@ -2,7 +2,7 @@
 
 A modern, interactive portfolio website showcasing my projects, skills, achievements, and professional journey. Built with **React** and **Bootstrap**, featuring smooth animations and a responsive design.
 
-**🔗 Live Demo:** [https://yogeshwaranportfolio1.vercel.app/](https://yogeshwaranportfolio1.vercel.app/)
+**🔗 Live Demo:** [https://yogeshwaran1.vercel.app/](https://yogeshwaran1.vercel.app/)
 
 ---
 
