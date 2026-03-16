@@ -29,6 +29,7 @@ import "./advanced-effects.css";
 import "./interactive-effects.css";
 import "./effects-engine.js";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./ultimate-design.css";
 
 function App() {
   const [load, upadateLoad] = useState(true);

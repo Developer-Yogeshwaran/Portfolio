@@ -7,7 +7,7 @@ function AboutCard() {
       <blockquote className="blockquote mb-0" style={{ fontSize: "1.05em" }}>
         <p style={{ textAlign: "justify", color: "#fff", lineHeight: "1.8" }}>
           Hi Everyone, I am <span className="text-gradient" style={{ fontWeight: "600" }}>Yogeshwaran A </span>
-          <br />A passionate and motivated fresher with a strong foundation in Java development, Artificial Intelligence, Machine Learning, and Python programming. Certified in IBM Generative AI and Google Digital Marketing, with hands-on experience in AI-based academic projects.
+          <br />A passionate and motivated fresher with a strong foundation in <span className="purple-accent">Java development, Artificial Intelligence, Machine Learning, and Python programming.</span> Certified in <span className="purple-accent">IBM Generative AI</span> and <span className="purple-accent">Google Digital Marketing</span>, with hands-on experience in AI-based academic projects.
           <br />
           <br />
           Seeking an internship to apply problem-solving skills and contribute to innovative solutions!

@@ -1,6 +1,5 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
 import homeLogo from "../../Assets/home-main.svg";
 import Particle from "../Particle";
 import Home2 from "./Home2";
@@ -9,12 +8,23 @@ import Statistics from "../Statistics/Statistics";
 import Services from "../Services/Services";
 import Testimonials from "../Testimonials/Testimonials";
 import FeaturedWork from "../FeaturedWork/FeaturedWork";
+import pdf from "../../Assets/A_Yogeshwaran_Resume.pdf";
 
 function Home() {
-  const navigate = useNavigate();
-
   const handleResumeDownload = () => {
-    navigate("/resume");
+    try {
+      const link = document.createElement("a");
+      link.href = pdf;
+      link.download = "A_Yogeshwaran_Resume.pdf";
+      link.style.display = "none";
+      document.body.appendChild(link);
+      link.click();
+      setTimeout(() => {
+        document.body.removeChild(link);
+      }, 100);
+    } catch (error) {
+      console.error("Download failed:", error);
+    }
   };
 
   return (
