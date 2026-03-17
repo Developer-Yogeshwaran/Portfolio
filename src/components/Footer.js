@@ -24,7 +24,7 @@ function Footer() {
               <a
                 href="https://github.com/Developer-Yogeshwaran"
                 style={{ color: "white" }}
-                target="_blank" 
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 <AiFillGithub />
@@ -34,7 +34,7 @@ function Footer() {
               <a
                 href="https://www.linkedin.com/in/yogeshwaran-a-64655b396"
                 style={{ color: "white" }}
-                target="_blank" 
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 <FaLinkedinIn />
@@ -42,9 +42,9 @@ function Footer() {
             </li>
             <li className="social-icons">
               <a
-                href="mailto:yogeshofficialwork1@gmail.com"
+                href="https://www.instagram.com/thala_for_life1/"
                 style={{ color: "white" }}
-                target="_blank" 
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 <AiFillInstagram />

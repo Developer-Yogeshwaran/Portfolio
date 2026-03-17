@@ -49,7 +49,8 @@ function Home2() {
               <i>
                 <b className="text-gradient"> React.js, Bootstrap, and Tailwind CSS</b>
               </i>
-              {" "} to create impactful, scalable solutions. 💡
+              {" "} to create impactful, scalable solutions. 💡Continue
+              Generating..
               <br />
               <br />
               I thrive in collaborative environments and love solving complex problems with clean, efficient code.
