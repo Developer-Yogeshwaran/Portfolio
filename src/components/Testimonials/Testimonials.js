@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import { FaStar } from "react-icons/fa";
 import "./Testimonials.css";
 
@@ -46,9 +46,9 @@ function Testimonials() {
           </p>
         </div>
 
-        <Row className="testimonials-grid">
+        <div className="testimonials-grid">
           {testimonials.map((testimonial, index) => (
-            <Col md={4} key={index} className="testimonial-wrapper">
+            <div key={index} className="testimonial-wrapper">
               <div className="testimonial-card">
                 <div className="testimonial-header">
                   <div className="testimonial-avatar">{testimonial.image}</div>
@@ -71,9 +71,9 @@ function Testimonials() {
 
                 <p className="testimonial-feedback">"{testimonial.feedback}"</p>
               </div>
-            </Col>
+            </div>
           ))}
-        </Row>
+        </div>
 
         <div className="testimonial-cta">
           <p>Interested in working together or need a reference?</p>

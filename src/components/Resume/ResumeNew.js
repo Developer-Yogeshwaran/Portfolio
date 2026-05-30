@@ -14,17 +14,20 @@ function ResumeNew() {
     setWidth(window.innerWidth);
   }, []);
 
-  const handleDownload = () => {
+  const handleDownload = async () => {
     try {
+      const res = await fetch(pdf);
+      if (!res.ok) throw new Error(`HTTP error ${res.status}`);
+      const blob = await res.blob();
+      const url = window.URL.createObjectURL(blob);
       const link = document.createElement("a");
-      link.href = pdf;
+      link.href = url;
       link.download = "A_Yogeshwaran_Resume.pdf";
       link.style.display = "none";
       document.body.appendChild(link);
       link.click();
-      setTimeout(() => {
-        document.body.removeChild(link);
-      }, 100);
+      link.remove();
+      window.URL.revokeObjectURL(url);
     } catch (error) {
       console.error("Download failed:", error);
       alert("Failed to download resume. Please try again.");

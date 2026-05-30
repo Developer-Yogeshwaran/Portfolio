@@ -1,5 +1,4 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
 import {
   MdDesignServices,
   MdSmartToy,
@@ -67,8 +66,8 @@ function Services() {
   ];
 
   return (
-    <Container fluid className="services-section">
-      <Container>
+    <div className="services-section">
+      <div className="max-w-7xl mx-auto px-6 py-20">
         <div className="services-header">
           <h2 className="services-title">
             Services & <span className="services-highlight">Expertise</span>
@@ -78,9 +77,9 @@ function Services() {
           </p>
         </div>
 
-        <Row className="services-grid">
+        <div className="services-grid">
           {services.map((service, index) => (
-            <Col md={6} lg={4} key={index} className="service-card-wrapper">
+            <div key={index} className="service-card-wrapper">
               <div
                 className="service-card"
                 style={{
@@ -98,17 +97,17 @@ function Services() {
                   ))}
                 </div>
               </div>
-            </Col>
+            </div>
           ))}
-        </Row>
+        </div>
 
         <div className="services-cta">
           <h3>Interested in collaborating?</h3>
           <p>Let's bring your ideas to life with cutting-edge solutions</p>
           <button className="cta-btn" onClick={handleGetInTouch}>Get In Touch</button>
         </div>
-      </Container>
-    </Container>
+      </div>
+    </div>
   );
 }
 

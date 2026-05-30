@@ -1,16 +1,19 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import Particle from "../Particle";
 import Github from "./Github";
 import Aboutcard from "./AboutCard";
 import laptopImg from "../../Assets/about.png";
 import Skills from "./Skills";
 import ProjectLinks from "./ProjectLinks";
 
+const Particle = lazy(() => import("../Particle"));
+
 function About() {
   return (
     <Container fluid className="about-section">
-      <Particle />
+      <Suspense fallback={null}>
+        <Particle />
+      </Suspense>
       <Container>
         <Row style={{ justifyContent: "center", padding: "10px" }}>
           <Col
@@ -33,7 +36,7 @@ function About() {
             style={{ paddingTop: "120px", paddingBottom: "50px" }}
             className="about-img"
           >
-            <img src={laptopImg} alt="about" className="img-fluid" />
+            <img src={laptopImg} alt="about" className="img-fluid" loading="lazy" decoding="async" />
           </Col>
         </Row>
 

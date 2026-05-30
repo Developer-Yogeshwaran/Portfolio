@@ -248,6 +248,7 @@ button:focus {
   background-size: cover !important;
   width: 100%;
   height: 100%;
+  z-index: -1;
 }
 
 .home-header {
@@ -256,7 +257,7 @@ button:focus {
 
 .home-section {
   position: relative;
-  z-index: -1;
+  z-index: 0;
   background-image: var(--image-gradient), url(./Assets/home-bg.jpg);
   background-position: top center;
   background-repeat: no-repeat;
@@ -298,9 +299,82 @@ button:focus {
   .Typewriter__wrapper {
     font-size: 1.4em !important;
     font-weight: 500 !important;
-    position: absolute !important;
+    position: static !important;
+    display: block !important;
+    width: 100% !important;
+    margin: 1.2rem 0 0 !important;
   }
   .Typewriter__cursor {
+    display: none !important;
+  }
+
+  .home-content {
+    padding: 5rem 1.5rem 2rem !important;
+  }
+
+  .home-header {
+    padding-top: 40px !important;
+    text-align: center !important;
+  }
+
+  .heading {
+    font-size: 2rem !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+
+  .animated-title {
+    font-size: 2.2em !important;
+    letter-spacing: 1px !important;
+  }
+
+  .home-avatar {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+  }
+
+  .home-avatar img {
+    width: 90% !important;
+    max-width: 320px !important;
+    height: auto !important;
+  }
+
+  .cta-button {
+    width: min(100%, 320px) !important;
+    padding: 14px 28px !important;
+    margin: 1.5rem auto 0 !important;
+    display: inline-flex !important;
+    justify-content: center !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-content {
+    padding: 4rem 1rem 2rem !important;
+  }
+
+  .heading {
+    font-size: 1.8rem !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  .animated-title {
+    font-size: 1.8em !important;
+  }
+
+  .typewriter-text {
+    font-size: 1.15em !important;
+  }
+
+  .cta-button {
+    width: 100% !important;
+    max-width: 280px !important;
+  }
+
+  .glowing-accent,
+  .floating-bracket,
+  .decorative-line {
     display: none !important;
   }
 }
@@ -723,6 +797,40 @@ button:focus {
 .fork-btn {
   font-size: 1.1em !important;
   padding-top: 10px !important;
+}
+
+/* Reduce animations and transitions on small screens for performance */
+@media (max-width: 767px) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+
+  .project-card-view:hover,
+  .blog-card-view:hover,
+  .tech-icons:hover,
+  .home-social-icons:hover,
+  .navbar-toggler:not(.collapsed) span:nth-child(1),
+  .navbar-toggler:not(.collapsed) span:nth-child(3) {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+
+  .glowing-accent,
+  .floating-bracket,
+  .decorative-line,
+  .Typewriter__cursor {
+    display: none !important;
+  }
+}
+
+/* Honor users' reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition: none !important;
+  }
 }
 
 .fork-btn-inner {

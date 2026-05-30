@@ -1,7 +1,6 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import homeLogo from "../../Assets/home-main.svg";
-import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
 import Statistics from "../Statistics/Statistics";
@@ -10,27 +9,15 @@ import Testimonials from "../Testimonials/Testimonials";
 import FeaturedWork from "../FeaturedWork/FeaturedWork";
 import pdf from "../../Assets/A_Yogeshwaran_Resume.pdf";
 
-function Home() {
-  const handleResumeDownload = () => {
-    try {
-      const link = document.createElement("a");
-      link.href = pdf;
-      link.download = "A_Yogeshwaran_Resume.pdf";
-      link.style.display = "none";
-      document.body.appendChild(link);
-      link.click();
-      setTimeout(() => {
-        document.body.removeChild(link);
-      }, 100);
-    } catch (error) {
-      console.error("Download failed:", error);
-    }
-  };
+const Particle = lazy(() => import("../Particle"));
 
+function Home() {
   return (
     <section>
       <Container fluid className="home-section" id="home">
-        <Particle />
+        <Suspense fallback={null}>
+          <Particle />
+        </Suspense>
 
         {/* Glowing Accents */}
         <div className="glowing-accent accent-1"></div>
@@ -73,13 +60,14 @@ function Home() {
                 </div>
               </div>
 
-              <button 
-                className="cta-button" 
-                onClick={handleResumeDownload}
+              <a
+                href={pdf}
+                download="A_Yogeshwaran_Resume.pdf"
+                className="cta-button"
                 style={{ cursor: "pointer", zIndex: 10, position: "relative" }}
               >
                 📥 Download Resume
-              </button>
+              </a>
             </Col>
 
             <Col md={5} style={{ paddingBottom: 20 }} className="home-avatar">
@@ -88,6 +76,8 @@ function Home() {
                 alt="home pic"
                 className="img-fluid zoom-in-out"
                 style={{ maxHeight: "450px" }}
+                loading="lazy"
+                decoding="async"
               />
             </Col>
           </Row>

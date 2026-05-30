@@ -24,7 +24,37 @@ function Achievements() {
       icon: <DiCode />,
       title: "NPTEL Certification - Data Structures and Algorithms",
       description: "Advanced DSA concepts using Java",
-      date: "2024",
+      date: "2025",
+    },
+    {
+      icon: <FaMedal />,
+      title: "CodeChef Java Certification",
+      description: "Completed professional Java certification challenges on CodeChef",
+      date: "2026",
+    },
+    {
+      icon: <FaMedal />,
+      title: "CodeChef SQL Certification",
+      description: "Validated SQL skills through CodeChef professional certification practice",
+      date: "2026",
+    },
+    {
+      icon: <FaMedal />,
+      title: "CodeChef 100+ Days Challenge",
+      description: "Sustained 100+ days of CodeChef practice and reached 2-star rating",
+      date: "2026",
+    },
+    {
+      icon: <FaMedal />,
+      title: "Introduction to Industry 4.0 and Industrial Internet – NPTEL",
+      description: "Score: 83% • Achievement: Elite + Silver",
+      date: "Apr 26, 2026",
+    },
+    {
+      icon: <FaMedal />,
+      title: "Human Interaction – NPTEL",
+      description: "Score: 96% • Achievement: Gold",
+      date: "Apr 26, 2026",
     },
     {
       icon: <DiCode />,

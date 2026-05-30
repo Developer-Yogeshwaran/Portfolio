@@ -58,7 +58,7 @@ function Home2() {
           </Col>
           <Col md={4} className="myAvtar">
             <Tilt>
-              <img src={myImg} className="img-fluid float" alt="avatar" style={{ borderRadius: "15px" }} />
+              <img src={myImg} className="img-fluid float" alt="avatar" style={{ borderRadius: "15px" }} loading="lazy" decoding="async" />
             </Tilt>
           </Col>
         </Row>

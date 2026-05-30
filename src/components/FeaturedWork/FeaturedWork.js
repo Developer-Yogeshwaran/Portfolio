@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import "./FeaturedWork.css";
 
 function FeaturedWork() {
@@ -9,24 +9,38 @@ function FeaturedWork() {
   const featuredProjects = [
     {
       id: 1,
-      title: "Smart Shoe Charger IoT Device",
-      category: "IoT Development",
+      title: "Solar EV BMS System",
+      category: "Embedded Systems & IoT Development",
       description:
-        "An innovative wearable device that combines IoT technology with renewable energy. This project demonstrates mastery in hardware-software integration, demonstrating self-charging capabilities using sustainable energy concepts.",
-      technologies: ["IoT", "Hardware", "Python", "Embedded Systems", "Energy Harvesting"],
+        "An Arduino-based Solar Powered Electric Vehicle integrated with a Battery Management System (BMS). The project monitors battery voltage, current, and temperature in real time while enabling Bluetooth-based motor control and automated safety alerts.",
+      technologies: [
+        "Arduino",
+        "IoT",
+        "Embedded Systems",
+        "Bluetooth",
+        "C/C++",
+        "Sensors",
+        "Battery Management System",
+        "Renewable Energy",
+      ],
       highlights: [
-        "Self-charging functionality integrated",
-        "Health monitoring sensors integrated",
-        "Wireless communication protocol",
-        "Sustainable energy optimization",
+        "Real-time battery monitoring",
+        "Bluetooth vehicle control using HC-05",
+        "LCD live parameter display",
+        "Safety alerts using buzzer and LED",
+        "4 DC motor control",
+        "Solar energy compatibility",
+        "Modular embedded code structure",
+        "Hardware-software integration",
       ],
       metrics: {
         development: "6 months",
-        teamSize: "4 people",
-        impact: "Patent potential",
+        teamSize: "3 people",
+        impact: "Smart EV and battery safety system implementation",
       },
-      color: "#c770f0",
-      icon: "⚡",
+      ghLink: "https://github.com/Developer-Yogeshwaran/smart-solar-ev-management-system",
+      color: "#4ecdc4",
+      icon: "🔋",
     },
     {
       id: 2,
@@ -128,12 +142,20 @@ function FeaturedWork() {
               </div>
 
               <div className="project-links">
-                <button className="link-btn github-btn">
-                  <FaGithub /> View Code
-                </button>
-                <button className="link-btn demo-btn">
-                  <FaExternalLinkAlt /> Learn More
-                </button>
+                {project.ghLink ? (
+                  <a
+                    href={project.ghLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="link-btn github-btn"
+                  >
+                    <FaGithub /> View Code
+                  </a>
+                ) : (
+                  <button className="link-btn github-btn" disabled>
+                    <FaGithub /> View Code
+                  </button>
+                )}
               </div>
             </Col>
 

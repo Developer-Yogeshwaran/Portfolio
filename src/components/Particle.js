@@ -1,17 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Particles from "react-tsparticles";
 
 function Particle() {
+  const [enabled, setEnabled] = useState(true);
+
+  useEffect(() => {
+    const check = () => setEnabled(window.innerWidth >= 768);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
+
+  if (!enabled) return null;
+
   return (
     <Particles
       id="tsparticles"
       params={{
         particles: {
           number: {
-            value: 160,
+            // reduced particle count for performance
+            value: 30,
             density: {
               enable: true,
-              value_area: 1500,
+              value_area: 800,
             },
           },
           line_linked: {
@@ -20,7 +32,7 @@ function Particle() {
           },
           move: {
             direction: "right",
-            speed: 0.05,
+            speed: 0.04,
           },
           size: {
             value: 1,

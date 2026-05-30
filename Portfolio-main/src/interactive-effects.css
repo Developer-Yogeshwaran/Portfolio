@@ -1,0 +1,430 @@
+/* ========== PARALLAX & 3D DEPTH EFFECTS ========== */
+
+/* ===== PERSPECTIVE CONTAINERS ===== */
+.perspective-container {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.perspective-element {
+  transform-style: preserve-3d;
+  transform: translateZ(0);
+  transition: transform 0.6s ease;
+}
+
+.perspective-container:hover .perspective-element {
+  transform: rotateX(5deg) rotateY(5deg) translateZ(10px);
+}
+
+/* ===== SMOOTH PARALLAX SCROLL ===== */
+.parallax-layer {
+  position: relative;
+  z-index: 1;
+}
+
+.parallax-layer.deep {
+  transform: translateZ(-1px) scale(1.1);
+}
+
+.parallax-layer.medium {
+  transform: translateZ(0px);
+}
+
+.parallax-layer.shallow {
+  transform: translateZ(1px) scale(0.9);
+}
+
+/* ===== COUNTER ANIMATION WITH WOBBLE ===== */
+@keyframes wobble-counter {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-2px);
+  }
+  75% {
+    transform: translateX(2px);
+  }
+}
+
+.counter-wobble {
+  animation: wobble-counter 0.3s ease;
+}
+
+/* ===== HOVER LIFT WITH SHADOW ===== */
+@keyframes lift-shadow {
+  0% {
+    transform: translateY(0);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  100% {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(199, 112, 240, 0.3);
+  }
+}
+
+.lift-shadow:hover {
+  animation: lift-shadow 0.4s ease forwards;
+}
+
+/* ===== GRADIENT SHIFT ANIMATION ===== */
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gradient-shift {
+  background-size: 200% 200%;
+  animation: gradient-shift 4s ease infinite;
+}
+
+/* ===== ICON ROTATION + SCALE ===== */
+@keyframes icon-rotate-scale {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(10deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+.icon-rotate-scale:hover {
+  animation: icon-rotate-scale 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* ===== BACKGROUND ANIMATED GRADIENT ===== */
+@keyframes bg-gradient-shift {
+  0% {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 100% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.bg-gradient-animated {
+  background-size: 300% 300%;
+  animation: bg-gradient-shift 15s ease infinite;
+}
+
+/* ===== WAVE DISTORTION TEXT ===== */
+@keyframes wave-text {
+  0%, 100% {
+    text-shadow: none;
+    transform: none;
+  }
+  50% {
+    text-shadow:
+      -2px 0 0 #c770f0,
+      -4px 0 0 #ff6b9d,
+      -6px 0 0 #4ecdc4;
+    transform: skewX(-5deg);
+  }
+}
+
+.wave-text {
+  animation: wave-text 2s ease-in-out infinite;
+}
+
+/* ===== RIPPLE EFFECT ===== */
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+.ripple-effect::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  background: rgba(199, 112, 240, 0.5);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: ripple 0.8s ease-out;
+}
+
+/* ===== BOUNCE ENTRANCE ===== */
+@keyframes bounce-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) translateY(30px);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05) translateY(-5px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.bounce-in {
+  animation: bounce-in 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* ===== FADE SLIDE ENTRANCE ===== */
+@keyframes fade-slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-slide-in {
+  animation: fade-slide-in 0.7s ease forwards;
+}
+
+/* ===== ZOOM IN ENTRANCE ===== */
+@keyframes zoom-in {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.zoom-in {
+  animation: zoom-in 0.6s ease forwards;
+}
+
+/* ===== GLOW BOX SHADOW ===== */
+@keyframes glow-box {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(199, 112, 240, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(199, 112, 240, 0.6),
+                0 0 25px rgba(255, 107, 157, 0.3);
+  }
+}
+
+.glow-box {
+  animation: glow-box 2s ease-in-out infinite;
+}
+
+/* ===== BREATHING EFFECT ===== */
+@keyframes breathing {
+  0%, 100% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+.breathing {
+  animation: breathing 2.5s ease-in-out infinite;
+}
+
+/* ===== TYPING CURSOR ===== */
+@keyframes cursor-blink {
+  0%, 49% {
+    opacity: 1;
+  }
+  50%, 100% {
+    opacity: 0;
+  }
+}
+
+.typing-cursor {
+  animation: cursor-blink 1s infinite;
+}
+
+/* ===== RADIAL GRADIENT ANIMATION ===== */
+@keyframes radial-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.radial-animated {
+  background-size: 200% 200%;
+  animation: radial-shift 6s ease infinite;
+}
+
+/* ===== SPIN SMOOTH ===== */
+@keyframes spin-smooth {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spin-smooth {
+  animation: spin-smooth 3s linear infinite;
+}
+
+/* ===== ELASTIC SCALE ===== */
+@keyframes elastic-scale {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+.elastic-scale {
+  animation: elastic-scale 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+}
+
+/* ===== SWING MOTION ===== */
+@keyframes swing {
+  20% {
+    transform: rotate(15deg);
+  }
+  40% {
+    transform: rotate(-10deg);
+  }
+  60% {
+    transform: rotate(5deg);
+  }
+  80% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.swing {
+  animation: swing 0.8s ease-in-out;
+  transform-origin: top center;
+}
+
+/* ===== HEARTBEAT ANIMATION ===== */
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  14% {
+    transform: scale(1.3);
+  }
+  28% {
+    transform: scale(1);
+  }
+  42% {
+    transform: scale(1.3);
+  }
+  70% {
+    transform: scale(1);
+  }
+}
+
+.heartbeat {
+  animation: heartbeat 1.3s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+/* ===== FADEOUT BOTTOM ===== */
+@keyframes fadeout-bottom {
+  from {
+    opacity: 1;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+.fadeout-bottom {
+  animation: fadeout-bottom 0.8s ease forwards;
+}
+
+/* ===== ANIMATED BORDER ===== */
+@keyframes border-animation {
+  0%, 100% {
+    border-color: #c770f0;
+  }
+  25% {
+    border-color: #ff6b9d;
+  }
+  50% {
+    border-color: #4ecdc4;
+  }
+  75% {
+    border-color: #ffbe0b;
+  }
+}
+
+.animated-border {
+  animation: border-animation 3s ease infinite;
+}
+
+/* ===== CIRCULAR PROGRESS ANIMATION ===== */
+@keyframes circle-progress {
+  0% {
+    stroke-dasharray: 0, 100;
+-stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dasharray: 100, 100;
+    stroke-dashoffset: 0;
+  }
+}
+
+.circle-progress {
+  animation: circle-progress 2s ease forwards;
+}
+
+/* ===== RESPONSIVE ANIMATIONS ===== */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ===== DARK THEME ADJUSTMENTS ===== */
+@media (prefers-color-scheme: dark) {
+  .glow-box {
+    box-shadow: 0 0 10px rgba(199, 112, 240, 0.4);
+  }
+
+  .neon-pulse {
+    text-shadow: 0 0 10px #c770f0,
+                 0 0 20px #ff6b9d;
+  }
+}

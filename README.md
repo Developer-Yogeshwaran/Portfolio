@@ -188,7 +188,7 @@ I'm **Yogeshwaran A**, a passionate and motivated computer science student with 
 - 🏅 NPTEL - Data Structures and Algorithms
 
 ### Notable Projects:
-- **Smart Shoe Charger with Voice Assistant** - IoT/AI Project
+- **Solar EV BMS System** - Embedded Systems & IoT Project
 - **Resume Matcher** - AI-based Java Application
 - **AI Mental Health Chatbot** - NLP-based Solution
 
