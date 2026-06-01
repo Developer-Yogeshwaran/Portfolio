@@ -229,7 +229,14 @@
 /* ===== PROJECT LINKS ===== */
 .project-links {
   display: flex;
+  flex-wrap: wrap;
   gap: 15px;
+}
+
+.project-links a {
+  flex: 1 1 220px;
+  min-width: 180px;
+  text-align: center;
 }
 
 .link-btn {

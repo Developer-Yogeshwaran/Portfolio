@@ -1,15 +1,15 @@
 import React, { Suspense, lazy } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import homeLogo from "../../Assets/home-main.svg";
-import Home2 from "./Home2";
 import Type from "./Type";
-import Statistics from "../Statistics/Statistics";
-import Services from "../Services/Services";
-import Testimonials from "../Testimonials/Testimonials";
-import FeaturedWork from "../FeaturedWork/FeaturedWork";
 import pdf from "../../Assets/A_Yogeshwaran_Resume.pdf";
 
 const Particle = lazy(() => import("../Particle"));
+const Home2 = lazy(() => import("./Home2"));
+const Statistics = lazy(() => import("../Statistics/Statistics"));
+const Services = lazy(() => import("../Services/Services"));
+const Testimonials = lazy(() => import("../Testimonials/Testimonials"));
+const FeaturedWork = lazy(() => import("../FeaturedWork/FeaturedWork"));
 
 function Home() {
   return (
@@ -83,11 +83,21 @@ function Home() {
           </Row>
         </Container>
       </Container>
-      <Home2 />
-      <Statistics />
-      <FeaturedWork />
-      <Services />
-      <Testimonials />
+      <Suspense fallback={<div className="section-loading"><span className="loading-spinner" aria-hidden="true"></span>Loading about section...</div>}>
+        <Home2 />
+      </Suspense>
+      <Suspense fallback={<div className="section-loading"><span className="loading-spinner" aria-hidden="true"></span>Loading statistics...</div>}>
+        <Statistics />
+      </Suspense>
+      <Suspense fallback={<div className="section-loading"><span className="loading-spinner" aria-hidden="true"></span>Loading featured work...</div>}>
+        <FeaturedWork />
+      </Suspense>
+      <Suspense fallback={<div className="section-loading"><span className="loading-spinner" aria-hidden="true"></span>Loading services...</div>}>
+        <Services />
+      </Suspense>
+      <Suspense fallback={<div className="section-loading"><span className="loading-spinner" aria-hidden="true"></span>Loading testimonials...</div>}>
+        <Testimonials />
+      </Suspense>
     </section>
   );
 }

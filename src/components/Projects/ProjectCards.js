@@ -10,7 +10,10 @@ function ProjectCards(props) {
       style={{ 
         border: "none", 
         borderRadius: "12px",
-        transition: "all 0.3s ease"
+        transition: "all 0.3s ease",
+        display: "flex",
+        flexDirection: "column",
+        height: "100%",
       }}
     >
       <div style={{ overflow: "hidden", borderRadius: "12px 12px 0 0" }}>
@@ -42,9 +45,9 @@ function ProjectCards(props) {
           }}
         />
       </div>
-      <Card.Body>
+      <Card.Body style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", gap: "1rem", flex: 1 }}>
         <Card.Title style={{ color: "#c770f0", fontSize: "1.2em", fontWeight: "600" }}>{props.title}</Card.Title>
-        <Card.Text style={{ textAlign: "justify", color: "#ddd", lineHeight: "1.6" }}>
+        <Card.Text style={{ textAlign: "justify", color: "#ddd", lineHeight: "1.6", flex: 1 }}>
           {props.description}
         </Card.Text>
         
