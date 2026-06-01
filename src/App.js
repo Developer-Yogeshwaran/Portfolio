@@ -24,12 +24,13 @@ import "./interactive-effects.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./ultimate-design.css";
 
+import Projects from "./components/Projects/Projects";
+import Resume from "./components/Resume/ResumeNew";
+import Achievements from "./components/Achievements/Achievements";
+import Experience from "./components/Experience/Experience";
+
 const Home = lazy(() => import("./components/Home/Home"));
 const About = lazy(() => import("./components/About/About"));
-const Projects = lazy(() => import("./components/Projects/Projects"));
-const Resume = lazy(() => import("./components/Resume/ResumeNew"));
-const Achievements = lazy(() => import("./components/Achievements/Achievements"));
-const Experience = lazy(() => import("./components/Experience/Experience"));
 const AnimatedBackground = lazy(() => import("./components/AnimatedBackground"));
 
 function App() {
