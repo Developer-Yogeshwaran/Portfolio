@@ -90,6 +90,12 @@
   animation: iconBounceAlt 2s ease-in-out infinite;
 }
 
+/* Responsive icon sizing (was inline in JSX) */
+.project-icon {
+  font-size: 4rem;
+  line-height: 1;
+}
+
 @keyframes iconBounceAlt {
   0%, 100% {
     transform: scale(1) translateY(0);
@@ -234,8 +240,8 @@
 }
 
 .project-links a {
-  flex: 1 1 220px;
-  min-width: 180px;
+  flex: 0 0 auto;
+  min-width: 0;
   text-align: center;
 }
 
@@ -252,6 +258,12 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
+}
+
+/* Prevent single buttons from stretching too wide on large screens */
+.link-btn {
+  max-width: 320px;
+  white-space: nowrap;
 }
 
 .github-btn {
@@ -468,6 +480,11 @@
 
   .project-links {
     flex-direction: column;
+    align-items: stretch;
+  }
+
+  .link-btn {
+    max-width: 100%;
   }
 }
 
@@ -529,6 +546,21 @@
     font-size: 0.9em;
   }
 
+  .project-icon {
+    font-size: 2.5rem;
+  }
+
+
+@media (min-width: 992px) {
+  /* slightly reduce icon and button on wide desktops for balanced layout */
+  .project-icon {
+    font-size: 3.5rem;
+  }
+  .link-btn {
+    font-size: 0.95em;
+    padding: 10px 16px;
+  }
+}
   .technologies h4,
   .highlights h4 {
     font-size: 1.1em;

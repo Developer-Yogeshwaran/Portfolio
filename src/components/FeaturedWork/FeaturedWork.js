@@ -103,7 +103,7 @@ function FeaturedWork() {
         <div className="featured-work-container">
           <Row className="align-items-center">
             <Col lg={6} className="featured-details">
-              <div className="project-icon" style={{ fontSize: "4em" }}>
+              <div className="project-icon">
                 {project.icon}
               </div>
 

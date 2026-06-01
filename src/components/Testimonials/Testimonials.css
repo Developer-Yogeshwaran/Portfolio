@@ -169,6 +169,12 @@
   margin-bottom: 20px;
   position: relative;
   z-index: 2;
+  flex-wrap: wrap;
+}
+
+.testimonial-info {
+  flex: 1;
+  min-width: 0;
 }
 
 .testimonial-avatar {
@@ -407,10 +413,28 @@
     padding: 25px 20px;
   }
 
+  .testimonial-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .testimonial-info {
+    width: 100%;
+  }
+
   .testimonial-avatar {
     width: 50px;
     height: 50px;
     font-size: 2.5em;
+  }
+
+  .testimonial-name,
+  .testimonial-role,
+  .testimonial-institution {
+    width: 100%;
+    white-space: normal;
+    word-break: break-word;
   }
 
   .testimonial-name {

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import {
   MdCode,
   MdEmojiEvents,
@@ -72,15 +72,13 @@ function Statistics() {
           </p>
         </div>
 
-        <Row className="statistics-grid" style={{ justifyContent: "center" }}>
+        <div className="statistics-grid">
           {stats.map((stat, index) => (
-            <Col md={6} lg={3} key={index} className="stat-card-wrapper" style={{ display: "flex", justifyContent: "center" }}>
+            <div key={index} className="stat-card-wrapper">
               <div
                 className="stat-card"
                 style={{
                   "--stat-color": stat.color,
-                  width: "100%",
-                  maxWidth: "280px",
                 }}
               >
                 <div className="stat-icon">{stat.icon}</div>
@@ -90,33 +88,31 @@ function Statistics() {
                   <p className="stat-description">{stat.description}</p>
                 </div>
               </div>
-            </Col>
+            </div>
           ))}
-        </Row>
+        </div>
 
         <div className="stats-features">
-          <Row style={{ justifyContent: "center" }}>
-            <Col md={6} lg={3} className="feature-item" style={{ maxWidth: "280px" }}>
-              <div className="feature-icon">🎓</div>
-              <h4>Continuous Learner</h4>
-              <p>Always expanding knowledge in AI, ML, and full-stack development</p>
-            </Col>
-            <Col md={6} lg={3} className="feature-item" style={{ maxWidth: "280px" }}>
-              <div className="feature-icon">🚀</div>
-              <h4>Problem Solver</h4>
-              <p>Innovative approaches to complex technical challenges</p>
-            </Col>
-            <Col md={6} lg={3} className="feature-item" style={{ maxWidth: "280px" }}>
-              <div className="feature-icon">💻</div>
-              <h4>Full Stack Developer</h4>
-              <p>End-to-end development from frontend to deployment</p>
-            </Col>
-            <Col md={6} lg={3} className="feature-item" style={{ maxWidth: "280px" }}>
-              <div className="feature-icon">🎯</div>
-              <h4>Goal Oriented</h4>
-              <p>Focused on delivering quality solutions on time</p>
-            </Col>
-          </Row>
+          <div className="feature-item">
+            <div className="feature-icon">🎓</div>
+            <h4>Continuous Learner</h4>
+            <p>Always expanding knowledge in AI, ML, and full-stack development</p>
+          </div>
+          <div className="feature-item">
+            <div className="feature-icon">🚀</div>
+            <h4>Problem Solver</h4>
+            <p>Innovative approaches to complex technical challenges</p>
+          </div>
+          <div className="feature-item">
+            <div className="feature-icon">💻</div>
+            <h4>Full Stack Developer</h4>
+            <p>End-to-end development from frontend to deployment</p>
+          </div>
+          <div className="feature-item">
+            <div className="feature-icon">🎯</div>
+            <h4>Goal Oriented</h4>
+            <p>Focused on delivering quality solutions on time</p>
+          </div>
         </div>
       </Container>
     </section>
