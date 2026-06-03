@@ -4,7 +4,6 @@ import Github from "./Github";
 import Aboutcard from "./AboutCard";
 import laptopImg from "../../Assets/about.png";
 import Skills from "./Skills";
-import ProjectLinks from "./ProjectLinks";
 
 const Particle = lazy(() => import("../Particle"));
 
@@ -41,8 +40,6 @@ function About() {
         </Row>
 
         <Skills />
-
-        <ProjectLinks />
 
         <Github />
       </Container>

@@ -102,42 +102,40 @@ function Achievements() {
         <h1 className="project-heading">
           Professional <strong className="purple">Certifications</strong>
         </h1>
-        <p style={{ color: "white", marginBottom: "40px" }}>
+        <p className="section-subtitle">
           Industry-recognized certifications demonstrating expertise in modern technologies
         </p>
 
-        <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
+        <Row className="certifications-row">
           {certifications.map((cert, index) => (
-            <Col md={6} key={index} className="cert-card" style={{ marginBottom: "30px" }}>
+            <Col md={6} key={index} className="cert-card">
               <div className="certification-item">
-                <div className="cert-icon" style={{ fontSize: "2.5em", color: "#c770f0", marginBottom: "15px" }}>
-                  {cert.icon}
-                </div>
-                <h3 style={{ color: "white", marginBottom: "10px" }}>{cert.title}</h3>
-                <p style={{ color: "#b19cd9", marginBottom: "10px" }}>{cert.description}</p>
-                <p style={{ color: "#666", fontSize: "0.9em" }}>Completed: {cert.date}</p>
+                <div className="cert-icon">{cert.icon}</div>
+                <h3 className="cert-title">{cert.title}</h3>
+                <p className="cert-desc">{cert.description}</p>
+                <p className="cert-date">Completed: {cert.date}</p>
               </div>
             </Col>
           ))}
         </Row>
 
         {/* Academic Achievements Section */}
-        <h1 className="project-heading" style={{ marginTop: "60px" }}>
+        <h1 className="project-heading">
           Academic <strong className="purple">Achievements</strong>
         </h1>
 
-        <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
+        <Row className="achievement-row">
           {achievements.map((achievement, index) => (
-            <Col md={8} key={index} style={{ marginBottom: "30px" }}>
+            <Col md={8} key={index} className="academic-column">
               <div className="achievement-card">
-                <div style={{ display: "flex", alignItems: "flex-start", gap: "20px" }}>
-                  <div style={{ fontSize: "2em", color: "#c770f0", marginTop: "5px" }}>
+                <div className="achievement-card-content">
+                  <div className="achievement-icon">
                     <FaMedal />
                   </div>
-                  <div>
-                    <h3 style={{ color: "white", marginBottom: "8px" }}>{achievement.title}</h3>
-                    <p style={{ color: "#b19cd9", marginBottom: "8px" }}>{achievement.description}</p>
-                    <p style={{ color: "#888", fontSize: "0.95em" }}>{achievement.details}</p>
+                  <div className="achievement-text">
+                    <h3 className="achievement-title">{achievement.title}</h3>
+                    <p className="achievement-desc">{achievement.description}</p>
+                    <p className="achievement-detail">{achievement.details}</p>
                   </div>
                 </div>
               </div>
@@ -146,28 +144,28 @@ function Achievements() {
         </Row>
 
         {/* Skills Summary Section */}
-        <h1 className="project-heading" style={{ marginTop: "60px", marginBottom: "40px" }}>
+        <h1 className="project-heading section-heading">
           Technical <strong className="purple">Expertise</strong>
         </h1>
 
-        <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
+        <Row className="skills-row">
           <Col md={10}>
             <div className="skills-grid">
               <div className="skill-category">
-                <h4 style={{ color: "#c770f0", marginBottom: "15px" }}>Backend Development</h4>
-                <p style={{ color: "white" }}>Java • Spring Boot • Node.js • RESTful APIs • Database Management</p>
+                <h4>Backend Development</h4>
+                <p>Java • Spring Boot • Node.js • RESTful APIs • Database Management</p>
               </div>
               <div className="skill-category">
-                <h4 style={{ color: "#c770f0", marginBottom: "15px" }}>AI & Machine Learning</h4>
-                <p style={{ color: "white" }}>Python • TensorFlow • NLP • Generative AI • Data Analysis</p>
+                <h4>AI & Machine Learning</h4>
+                <p>Python • TensorFlow • NLP • Generative AI • Data Analysis</p>
               </div>
               <div className="skill-category">
-                <h4 style={{ color: "#c770f0", marginBottom: "15px" }}>Frontend Development</h4>
-                <p style={{ color: "white" }}>React.js • JavaScript • HTML/CSS • Bootstrap • Responsive Design</p>
+                <h4>Frontend Development</h4>
+                <p>React.js • JavaScript • HTML/CSS • Bootstrap • Responsive Design</p>
               </div>
               <div className="skill-category">
-                <h4 style={{ color: "#c770f0", marginBottom: "15px" }}>Tools & Platforms</h4>
-                <p style={{ color: "white" }}>Git/GitHub • VS Code • MySQL • MongoDB • Cloud Computing</p>
+                <h4>Tools & Platforms</h4>
+                <p>Git/GitHub • VS Code • MySQL • MongoDB • Cloud Computing</p>
               </div>
             </div>
           </Col>

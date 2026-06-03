@@ -312,7 +312,7 @@
 @media (max-width: 768px) {
   .services-grid {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 20px;
   }
 
   .services-title {
@@ -324,21 +324,28 @@
   }
 
   .service-card {
-    padding: 30px 25px;
+    padding: 22px 18px;
+    min-height: 300px;
+    gap: 12px;
   }
 
   .service-icon {
-    font-size: 2.5em;
-    margin-bottom: 15px;
+    font-size: 2rem;
+    margin-bottom: 10px;
   }
 
   .service-title {
-    font-size: 1.3em;
+    font-size: 1.15em;
   }
 
   .service-description {
-    font-size: 0.95em;
+    font-size: 0.92em;
+    -webkit-line-clamp: 3;
   }
+
+  .service-skills { gap: 6px; margin-top: 10px; }
+
+  .skill-badge { padding: 5px 10px; font-size: 0.78em; }
 
   .services-cta {
     padding: 40px;
@@ -354,45 +361,19 @@
 }
 
 @media (max-width: 480px) {
-  .services-section {
-    padding: 50px 0;
-  }
+  .services-section { padding: 40px 0; }
+  .services-grid { gap: 16px; }
+  .services-title { font-size: 1.4em; }
 
-  .services-title {
-    font-size: 1.6em;
-  }
+  .service-card { padding: 14px 12px; min-height: 0; }
+  .service-icon { font-size: 1.6em; margin-bottom: 8px; }
+  .service-title { font-size: 1em; }
+  .service-description { font-size: 0.85em; -webkit-line-clamp: 3; }
 
-  .service-card {
-    padding: 25px 20px;
-  }
+  .skill-badge { padding: 4px 8px; font-size: 0.72em; }
 
-  .service-icon {
-    font-size: 2em;
-  }
-
-  .service-title {
-    font-size: 1.1em;
-  }
-
-  .service-description {
-    font-size: 0.9em;
-  }
-
-  .skill-badge {
-    padding: 5px 10px;
-    font-size: 0.8em;
-  }
-
-  .services-cta {
-    padding: 30px 20px;
-  }
-
-  .services-cta h3 {
-    font-size: 1.4em;
-  }
-
-  .cta-btn {
-    padding: 12px 30px;
-    font-size: 1em;
-  }
+  .services-cta { padding: 20px; }
+  .services-cta h3 { font-size: 1.2em; }
+  .services-cta p { font-size: 0.95em; margin-bottom: 16px; }
+  .cta-btn { padding: 10px 22px; font-size: 0.95em; }
 }

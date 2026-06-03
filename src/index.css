@@ -11,3 +11,83 @@ h1, h2, h3, h4, h5, h6, .heading, .heading-name {
   font-family: "Raleway", sans-serif !important;
   font-weight: 700 !important;
 }
+
+:root {
+  --base-font: 16px; /* default base font (desktop) */
+  --space-md: 1rem; /* 16px */
+  --space-sm: 0.75rem; /* 12px */
+  --h1: 2rem; /* ~32px */
+  --h2: 1.5rem; /* ~24px */
+}
+
+html { font-size: var(--base-font); }
+
+/* Mobile-first sensible defaults */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  line-height: 1.5;
+  overflow-x: hidden; /* prevent horizontal scrolling */
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Headings sized relative to base font */
+h1 { font-size: var(--h1); margin: 0 0 0.5rem; }
+h2 { font-size: var(--h2); margin: 0 0 0.5rem; }
+h3, h4, h5, h6 { font-size: 1.125rem; margin: 0 0 0.5rem; }
+
+/* Responsive images/media */
+img, picture, video, canvas { max-width: 100%; height: auto; display: block; }
+
+/* Consistent spacing for sections */
+.container, .section {
+  padding-left: var(--space-md);
+  padding-right: var(--space-md);
+  padding-top: var(--space-sm);
+  padding-bottom: var(--space-sm);
+}
+
+.section { margin: var(--space-sm) 0; }
+
+/* Buttons and touch targets */
+button, .btn, a.button, .nav-link {
+  padding: 0.5rem 0.75rem;
+  min-height: 44px; /* recommended touch target */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Navbar toggle (hamburger) styling for better tap size */
+.navbar-toggler {
+  padding: 0.5rem;
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar-toggler span { display:block; width:22px; height:2px; background:#fff; margin:3px 0; transition:0.2s; }
+
+/* Ensure flex/grid children wrap and do not overflow */
+.flex-wrap { display:flex; flex-wrap:wrap; }
+.grid-wrap { display:grid; grid-auto-flow:row; grid-auto-rows:auto; }
+
+/* Media queries */
+@media (max-width: 767px) {
+  /* Reduce base font size on small screens for better fit */
+  :root { --base-font: 14px; --space-md: 0.75rem; --space-sm: 0.5rem; --h1: 1.6rem; --h2: 1.25rem; }
+
+  /* Make sure navbar links have generous tap targets */
+  .navbar .nav-link { padding: 0.6rem 0.75rem; }
+  .logo-text { font-size: 1.2rem; }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  :root { --base-font: 15px; --space-md: 0.9rem; --h1: 1.9rem; --h2: 1.4rem; }
+  .navbar-toggler { width: 48px; height: 48px; }
+}
+
+/* accessibility helpers */
+.high-contrast { color: #fff; }
+

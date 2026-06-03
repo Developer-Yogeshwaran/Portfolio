@@ -6,7 +6,8 @@
     rgba(26, 26, 30, 0.9),
     rgba(199, 112, 240, 0.05)
   );
-  padding: 80px 0;
+  padding: 40px 0 60px;
+  margin-top: 0;
   position: relative;
   overflow: hidden;
 }
@@ -90,9 +91,9 @@
     rgba(255, 255, 255, 0.05),
     rgba(199, 112, 240, 0.08)
   );
-  min-height: 240px;
+  min-height: 200px;
   width: 100%;
-  max-width: 300px;
+  max-width: 260px;
 
   backdrop-filter: blur(10px);
   border: 1px solid rgba(199, 112, 240, 0.18);
@@ -199,14 +200,14 @@
 }
 
 .stat-value {
-  font-size: 2em;
+  font-size: 1.6em;
   font-weight: 800;
   background: linear-gradient(135deg, var(--stat-color), #c770f0);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  margin-bottom: 10px;
-  letter-spacing: 2px;
+  margin-bottom: 8px;
+  letter-spacing: 1.5px;
 }
 
 .stat-title {
@@ -321,14 +322,13 @@
 
   .stat-value {
     font-size: 1.6em;
-  }
-
-  .stat-title {
-    font-size: 1.05em;
-  }
-
-  .stat-icon {
-    font-size: 2em;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--stat-color), #c770f0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 8px;
+    letter-spacing: 1.5px;
   }
 
   .feature-item {

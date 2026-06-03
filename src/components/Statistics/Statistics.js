@@ -13,7 +13,6 @@ function Statistics() {
     projects: 0,
     skills: 0,
     certifications: 0,
-    contributions: 0,
   });
 
   useEffect(() => {
@@ -22,7 +21,6 @@ function Statistics() {
         projects: prev.projects < 15 ? prev.projects + 1 : 15,
         skills: prev.skills < 40 ? prev.skills + 2 : 40,
         certifications: prev.certifications < 11 ? prev.certifications + 1 : 11,
-        contributions: prev.contributions < 200 ? prev.contributions + 5 : 200,
       }));
     }, 50);
 
@@ -50,13 +48,6 @@ function Statistics() {
       title: "Certifications",
       description: "Industry-recognized",
       color: "#4ecdc4",
-    },
-    {
-      icon: <MdLightbulb />,
-      value: count.contributions,
-      title: "Code Contributions",
-      description: "Open-source & personal",
-      color: "#ffbe0b",
     },
   ];
 
