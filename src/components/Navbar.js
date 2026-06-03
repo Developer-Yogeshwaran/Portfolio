@@ -4,16 +4,14 @@ import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
-import { CgGitFork } from "react-icons/cg";
+import { CgGitFork, CgFileDocument } from "react-icons/cg";
 import {
   AiFillStar,
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
   AiOutlineUser,
 } from "react-icons/ai";
-import { MdLocalFireDepartment } from "react-icons/md";
-import { CgFileDocument } from "react-icons/cg";
-import { MdHistory } from "react-icons/md";
+import { MdLocalFireDepartment, MdHistory } from "react-icons/md";
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);

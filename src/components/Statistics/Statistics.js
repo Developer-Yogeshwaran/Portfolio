@@ -3,7 +3,6 @@ import { Container } from "react-bootstrap";
 import {
   MdCode,
   MdEmojiEvents,
-  MdLightbulb,
   MdTrendingUp,
 } from "react-icons/md";
 import "./Statistics.css";

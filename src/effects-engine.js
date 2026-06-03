@@ -88,9 +88,6 @@ class ParticleEffectEngine {
       
       const angle = (i / burstCount) * Math.PI * 2;
       const velocity = 5 + Math.random() * 5;
-      // tx and ty calculated for potential animation use
-      // const tx = Math.cos(angle) * velocity * 20;
-      // const ty = Math.sin(angle) * velocity * 20;
       
       particle.style.animation = `none`;
       particle.style.position = "fixed";
